@@ -9,13 +9,13 @@ namespace WebApi.Botonera.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [MaxLength(7)]
+        [Required, MaxLength(7)]
         public string Clave { get; set; }
 
-        [MaxLength(50)]
+        [Required, MaxLength(50)]
         public string Nombre { get; set; }
 
-        [MaxLength(255)]
+        [Required, MaxLength(255)]
         public string Descripcion { get; set; }
 
         public ICollection<EstacionTrabajoDefecto> EstacionTrabajoDefecto { get; set; }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebApi.Botonera.Context;
+using WebApi.Botonera.DTOs;
 using WebApi.Botonera.Models;
 
 namespace WebApi.Botonera
@@ -21,6 +22,7 @@ namespace WebApi.Botonera
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            AutoMapperConfiguration.Configure();
         }
 
         public void ConfigureServices(IServiceCollection services)
